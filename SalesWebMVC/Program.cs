@@ -18,6 +18,7 @@ builder.Services.AddDbContext<SalesWebMVCContext>(options =>
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<SellerService>();  // SellerService -----
+builder.Services.AddScoped<DepartmentService>();  // DepartmentService -----
 
 var app = builder.Build();
 
