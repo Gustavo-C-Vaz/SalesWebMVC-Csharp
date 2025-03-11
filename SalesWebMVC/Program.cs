@@ -4,6 +4,8 @@ using SalesWebMVC.Controllers;
 using SalesWebMVC.Data;
 using SalesWebMVC.Models;
 using SalesWebMVC.Services;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
 
 var builder = WebApplication.CreateBuilder(args);
 
