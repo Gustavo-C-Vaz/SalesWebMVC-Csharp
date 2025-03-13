@@ -14,6 +14,7 @@ builder.Services.AddDbContext<SalesWebMVCContext>(options =>
     .Configuration
     .GetConnectionString("SalesWebMVCContext"),
     ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("SalesWebMVCContext")))); // MySQL -------
+
 //options.UseSqlServer(builder.Configuration.GetConnectionString("SalesWebMVCContext")
 //?? throw new InvalidOperationException("Connection string 'SalesWebMVCContext' not found.")));
 
@@ -21,6 +22,7 @@ builder.Services.AddDbContext<SalesWebMVCContext>(options =>
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<SellerService>();  // SellerService -----
 builder.Services.AddScoped<DepartmentService>();  // DepartmentService -----
+builder.Services.AddScoped<SalesRecordService>();  // SalesRecordService  ------
 
 var app = builder.Build();
 
